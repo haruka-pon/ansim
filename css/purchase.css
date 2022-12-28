@@ -1,0 +1,165 @@
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+.rows {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  border-bottom: 1px solid #bdbdbd;
+  padding: 40px 0;
+}
+
+.rows h2 {
+  grid-column: 1/2;
+  font-weight: 700;
+}
+
+.rows > div:nth-of-type(1) {
+  grid-column: 2/3;
+}
+
+.rows > div:nth-of-type(1) > div {
+  display: flex;
+  gap: 20px;
+}
+
+.rows > div:nth-of-type(1) > div img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background-color: #ededed;
+  border-radius: 3px;
+}
+
+.rows > div:nth-of-type(1) > div #item_name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.rows > div:nth-of-type(1) > div #seller span {
+  color: #006eff;
+}
+
+.rows > div:nth-of-type(1) .price {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #cc0000;
+}
+
+.rows > div:nth-of-type(2) {
+  grid-column: 3/4;
+  height: 54px;
+  text-align: center;
+  padding: 20px 16px;
+}
+
+.rows a, .rows .change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #006eff;
+}
+
+.rows a span, .rows .change span {
+  font-size: 1.1rem;
+}
+
+.rows .cancel {
+  background-color: #fff;
+  color: #832ee4 !important;
+  border: 1px solid #832ee4;
+}
+
+.rows .cancel:hover {
+  background-color: rgba(131, 46, 228, 0.207);
+}
+
+.rows .cancel a {
+  color: #832ee4 !important;
+}
+
+.rows .pay_add {
+  justify-content: left;
+}
+
+.rows #shipping_address div {
+  margin-bottom: 5px;
+}
+
+.rows #shipping_address div:last-child {
+  margin-top: 10px;
+}
+
+.rows #shipping_date div {
+  margin-bottom: 5px;
+}
+
+.rows #shipping_date div:last-child {
+  margin-top: 10px;
+}
+
+.rows .payment {
+  display: flex;
+  align-items: center;
+}
+
+.rows #bill {
+  margin: 0 auto 0 0;
+}
+
+.rows #bill > .rows {
+  width: 400px;
+  height: 2.5rem;
+  display: flex;
+  justify-content: left;
+  justify-items: start;
+  border: none;
+  padding: 5px 0;
+}
+
+.rows #bill > .rows > div:nth-of-type(1) {
+  width: 150px;
+}
+
+.rows #bill > .rows > div:nth-of-type(2) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.rows #bill > .rows:last-child {
+  padding-top: 25px;
+}
+
+.rows #bill .price {
+  margin: 0;
+}
+
+#privacy {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#privacy a {
+  color: #006eff;
+}
+
+#purchase_btn {
+  margin: 60px auto;
+  display: block;
+  height: 54px;
+  width: 200px;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+#purchase_btn:disabled {
+  background-color: grey;
+}
+
+#purchase_btn:disabled:hover {
+  opacity: 1;
+}

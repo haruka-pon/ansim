@@ -1,0 +1,5 @@
+<?php
+require_once "../model/func.php";
+require_once "../../const.php";
+require_once "../view/premium_user.php";
+?>

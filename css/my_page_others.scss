@@ -1,0 +1,135 @@
+@import "variable";
+section{
+    display: flex;
+}
+
+/* ===== 左にあるナビ (マイページ共通ナビ) ===== */
+#navi{
+    min-width: 300px;
+    margin: 0 20px;
+    div{
+        position: sticky;
+        top: 110px;
+    }
+
+    a{
+        display: block;
+    }
+    a:hover{
+        background-color: $bgc;
+    }
+    a>div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        height: 60px;
+        border-bottom: solid 1px $bgc;
+    }
+    a:last-child{
+        color: #32C1EB;
+    }
+/*     a:nth-of-type(3){
+        background: $bgc-4dp;
+    } */
+}
+
+.logout_link{
+    transition: color 0.3s;
+    &:hover{
+        color: rgb(253, 39, 96) !important;
+    }
+}
+/* ===== 右側のコンテンツ（main） ===== */
+main{
+    padding: 0 20px;
+}
+.contents{
+    h2{
+        font-size: 1.4rem;
+        padding-bottom: 30px;
+        border-bottom: solid 1px $bgc;
+        margin-bottom: 30px;
+    }
+
+}
+.current{
+    background-color: $bgc-2dp;
+}
+#item_list_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    .item,.transaction{
+        width: 180px;
+        height: 180px;
+        & + div{
+            margin: 5px 0 15px 0;
+        }
+        position: relative;
+    }
+    .delete_btn{
+        display: block;
+        margin: 0 0 0 auto;
+        background: none;
+        font-size: 0.8rem;
+        color: $bgc-4dp;
+        text-align: right;
+        background: none;
+        border-radius: 4px;
+        padding: 0;
+    }
+    .delete_btn:hover{
+        color: #FC1731;
+        transition: 0.3s;
+    }
+
+    /* 取引中のラベル */
+    .transaction:before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 60px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: rgba(255, 153, 0, 0.904);
+
+    }
+    .transaction:after {
+        content: "取引中";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        //font-size: xx-small;
+        font-size: 0.9rem;
+        color: #FFF;
+        //transform: rotate(-45deg) translate(-5px, 5px);
+    }
+    /* 売り切れのラベル */
+    .sold:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 50px solid #FC1731;
+        border-right: 50px solid transparent;
+    }
+    .sold:after {
+        content: "SOLD";
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        font-size: xx-small;
+        color: #FFF;
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .item_price{
+        position: absolute;
+    }
+}

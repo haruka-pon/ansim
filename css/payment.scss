@@ -1,0 +1,96 @@
+@import "variable";
+
+.form_box{
+    width: 60%;
+    margin: 0 auto;
+    h1{
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    div{
+        margin-bottom: 40px;
+    }
+    button{
+        width: 40%;
+        text-align: center;
+    }
+    .btn_box{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        a{
+            display: block;
+            width: 40%;
+            text-align: center;
+            background-color: #832ee4;
+            color: white;
+            border-radius: 4px;
+            padding: 8px 24px;
+            transition: opacity 0.3s;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// brand radio
+input[type=radio]+label:before{
+    content: "";
+    display: inline-block;
+    background-size: contain;
+    width: 60px;
+    height: 40px;
+}
+input[type=radio][value="brand_visa"]+label:before{
+    background-image: url(../img/visa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+input[type=radio][value="brand_jcb"]+label:before{
+    background-image: url(../img/jcb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+input[type=radio][value="brand_master"]+label:before{
+    background-image: url(../img/master.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+input[type=radio][value="brand_amex"]+label:before{
+    background-image: url(../img/amex.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+input[type=radio]:checked+label::before{
+    box-shadow: 0 0 0 3px rgb(33, 150, 243) inset;
+    box-sizing: border-box;
+    background-position: center;
+}
+input[type=radio]{
+    display: none;
+}
+
+
+// text
+.m-form-text {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.m-form-text:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+

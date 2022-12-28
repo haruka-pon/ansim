@@ -1,0 +1,355 @@
+#item_datail #item_box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#item_datail #item_box #img_area {
+  grid-column: 1/2;
+  position: sticky;
+  top: 110px;
+  padding: 0 25px 0 0;
+  display: flex;
+  height: fit-content;
+}
+
+#item_datail #item_box #img_area .img_container {
+  background-color: #ededed;
+}
+
+#item_datail #item_box #img_area .main_item_img {
+  height: 500px;
+  width: 500px;
+  object-fit: contain;
+}
+
+#item_datail #item_box #img_area .sub_item_img {
+  width: 93.75px;
+  height: 93.75px;
+  object-fit: contain;
+}
+
+#item_datail #item_box #img_area .sub_item_wrapper {
+  margin-right: 15px;
+}
+
+#item_datail #item_box #img_area .slider {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+#item_datail #item_box #img_area .slider .slide_box {
+  display: flex;
+  transition: transform 0.3s;
+}
+
+#item_datail #item_box #img_area .slider .img_container {
+  margin-bottom: 15px;
+  width: 500px;
+  height: 500px;
+}
+
+#item_datail #item_box #img_area .slider .prev, #item_datail #item_box #img_area .slider .next {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.159);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem !important;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#item_datail #item_box #img_area .slider .prev:hover, #item_datail #item_box #img_area .slider .next:hover {
+  opacity: 1;
+}
+
+#item_datail #item_box #img_area .slider .prev {
+  left: 0;
+}
+
+#item_datail #item_box #img_area .slider .next {
+  right: 0;
+}
+
+#item_datail #item_box #img_area .slider_nav {
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  padding: 40px 0;
+}
+
+#item_datail #item_box #img_area .slider_nav .slide_box {
+  transition: transform 0.3s;
+}
+
+#item_datail #item_box #img_area .slider_nav .img_container {
+  width: 93.75px;
+  height: 93.75px;
+  margin-bottom: 15px;
+}
+
+#item_datail #item_box #img_area .slider_nav .prev, #item_datail #item_box #img_area .slider_nav .next {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px !important;
+  width: 100%;
+  height: 25px;
+  overflow: hidden;
+}
+
+#item_datail #item_box #img_area .slider_nav .prev:hover, #item_datail #item_box #img_area .slider_nav .next:hover {
+  background-color: #cecece;
+}
+
+#item_datail #item_box #img_area .slider_nav .prev {
+  top: 0;
+}
+
+#item_datail #item_box #img_area .slider_nav .next {
+  bottom: 0;
+}
+
+#item_datail #item_box #item_description {
+  grid-column: 2/3;
+  padding: 0 15px 15px 15px;
+}
+
+#item_datail #item_box #item_description #purchase_button {
+  width: 100%;
+  text-align: center;
+}
+
+#item_datail #item_box #item_description .br {
+  margin: 40px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+#item_datail #item_box #item_description #item_name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#item_datail #item_box #item_description #icons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+#item_datail #item_box #item_description #icons button {
+  background: #fff;
+  color: #000;
+  border-radius: 0;
+  padding: 0;
+  transition: none;
+  font-size: 32px;
+}
+
+#item_datail #item_box #item_description #icons span {
+  font-size: 2rem;
+}
+
+#item_datail #item_box #item_description #icons span.fav_cnt, #item_datail #item_box #item_description #icons span.com_cnt {
+  font-size: 1rem;
+}
+
+#item_datail #item_box #item_description #icons .comment_icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#item_datail #item_box #item_description #price {
+  color: #545454;
+  margin-bottom: 30px;
+}
+
+#item_datail #item_box #item_description #price span {
+  font-size: 1.2rem;
+  color: #ca0000;
+  font-weight: 700;
+}
+
+#item_datail #item_box #item_description #description {
+  margin-bottom: 50px;
+}
+
+#item_datail #item_box #item_description #description h3 {
+  font-weight: 1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#item_datail #item_box #item_description .desc_lists {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#item_datail #item_box #item_description .desc_lists div {
+  width: 100%;
+}
+
+#item_datail #item_box #item_description .desc_lists div:first-of-type {
+  font-weight: 600;
+}
+
+#item_datail #item_box #item_description .desc_lists div:nth-of-type(2) {
+  text-align: right;
+}
+
+#item_datail #item_box #item_description #seller_info h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#item_datail #item_box #item_description #seller_info h3.l {
+  font-size: 1.4rem;
+}
+
+#item_datail #item_box #item_description #seller_info #seller_account {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#item_datail #item_box #item_description #seller_info #seller_account .account_img {
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+}
+
+#item_datail #item_box #item_description #seller_info #seller_account span.account_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  background-color: #cacaca;
+  border-radius: 100px;
+}
+
+#item_datail #item_box #item_description #seller_info #rate {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box {
+  padding-top: 20vh;
+  margin-top: -20vh;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .comment {
+  margin-bottom: 15px;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .comment .username {
+  width: fit-content;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition: border-color 0.3s;
+  margin-bottom: 4px;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .comment .username:hover {
+  border-color: #000;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .comment .text {
+  width: fit-content;
+  padding: 10px 25px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  position: relative;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .comment .text .date {
+  font-size: 0.7rem;
+  text-align: right;
+  position: absolute;
+  bottom: 100%;
+  right: 2%;
+  margin-bottom: 4px;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .form {
+  margin-top: 30px;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .form textarea {
+  width: 100%;
+  border: 1px solid #acacac;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .form textarea:focus, #item_datail #item_box #item_description #seller_info #comment_box .form textarea:not(:placeholder-shown) {
+  border-color: #141414;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .form #comment_send {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  transition: background-color 0.3s;
+  color: #832ee4;
+  border: 1px solid #832ee4;
+}
+
+#item_datail #item_box #item_description #seller_info #comment_box .form #comment_send:hover {
+  background-color: #832ee4;
+  color: #fff;
+  opacity: 1;
+}
+
+#item_list_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#item_list_wrapper .item {
+  width: 180px;
+  height: 180px;
+  background-color: #b7c6f0;
+  position: relative;
+  background-color: #ededed;
+}
+
+#item_list_wrapper .item + div {
+  margin: 5px 0 15px 0;
+}
+
+#item_list_wrapper .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#item_list_wrapper .item_price {
+  font-weight: 900;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 15px 0 0 5px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}

@@ -1,0 +1,85 @@
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+section {
+  width: 600px;
+  padding: 20vh 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 35px;
+}
+
+label div {
+  font-weight: 600;
+}
+
+label .required {
+  font-weight: normal;
+  font-size: 0.9rem;
+  background-color: red;
+  border-radius: 2px;
+  padding: 2px 4px;
+  color: white;
+}
+
+label input, label textarea, label select {
+  padding: 8px 24px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+label select:invalid {
+  color: #757575;
+}
+
+label .post_box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+label .post_box input {
+  width: 50%;
+}
+
+label .post_box button {
+  padding: 8px;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#privacy {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#privacy a {
+  color: #006eff;
+}
+
+#sign_in_btn {
+  margin: 0 auto;
+  display: block;
+}
+
+.err_msg {
+  margin-bottom: 15px;
+  color: #e10451;
+}
+
+#forget_password {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}

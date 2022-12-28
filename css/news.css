@@ -1,0 +1,39 @@
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.wrapper h1 {
+  font-size: 30px;
+  border-bottom: solid 2px #832ee4;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.wrapper a {
+  cursor: pointer;
+}
+
+.wrapper .area {
+  min-height: 500px;
+}
+
+.wrapper .area ul a {
+  margin: 0 auto;
+  display: block;
+  padding: 20px 0 20px 20px;
+  border-bottom: solid 0.5px #cfcfcf;
+  transition: box-shadow 0.3s;
+  border-radius: 4px;
+}
+
+.wrapper .area ul a:hover {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.none {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 40px;
+  text-align: center;
+}

@@ -1,0 +1,100 @@
+section {
+  width: 700px;
+  height: 100%;
+  padding: 0 100px;
+}
+
+section h1 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  padding: 1rem 0 1.5rem;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+section h1:before {
+  position: absolute;
+  bottom: -6px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: #ff9900;
+}
+
+section .maru {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background-color: #141414;
+  margin: 0 auto 50px;
+}
+
+section .maru .material-icons-outlined:nth-of-type(1) {
+  font-size: 5rem;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  color: white;
+}
+
+section div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+section div h2 {
+  font-weight: 700;
+  width: 150px;
+}
+
+section div .price {
+  text-align: right;
+  display: block;
+  font-size: 1.1rem;
+}
+
+section .material-icons-outlined:nth-of-type(2) {
+  font-size: 1.1rem;
+}
+
+section .change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #006eff;
+}
+
+section .change span {
+  font-size: 1.1rem;
+}
+
+section #purchase_btn {
+  margin: 60px auto;
+  display: block;
+  height: 54px;
+  width: 200px;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+section .btn_box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+section .btn_box .cancel {
+  background-color: #fff;
+  color: #832ee4;
+  border: 1px solid #832ee4;
+}
+
+section .btn_box .cancel:hover {
+  background-color: rgba(131, 46, 228, 0.207);
+}

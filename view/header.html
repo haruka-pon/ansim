@@ -1,0 +1,107 @@
+<?php
+try {
+    // mysql接続
+    $pdo = new PDO('mysql: host=localhost; dbname=ansim; charset=utf8', 'root', '');
+
+    // エラー設定
+    $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+    // クエリ作成
+    $stmt = $pdo -> prepare('SELECT * FROM category');
+
+    // クエリ実行
+    $stmt -> execute();
+
+    // 結果を取得
+    $ctgrs = $stmt -> fetchAll();
+
+    // 接続終了
+    $pdo = null;
+
+// 例外処理
+} catch(PDOException $e) {
+    echo 'Error：' . $e -> getMessage();
+    exit;
+}
+?>
+
+<header>
+    <form id="header_box" action="" method="post">
+        <div class="left">
+            <a href="./home.php"><div id="top_logo"><img src="../img/anism_text_logo.svg" alt="LOGO" class="top_logo"></div></a>
+            <div class="search_bar">
+                <input type="text" name="header_search_item" id="header_serach" class="search_item" placeholder = "何をおさがしですか" autocomplete="off">
+                <?php
+                if(isset($_POST['header_search_item'])):
+                    header('location: ../controller/search_result.php?search_result=' . $_POST['header_search_item']);
+                    exit;
+                endif;
+                ?>
+                <span class="material-icons-outlined">search</span>
+                <div class="category_list is-inactive">
+                    <img class="close" src="https://img.icons8.com/ios-glyphs/30/000000/delete-sign.png">
+                    <ul>
+                        <?php for($i=0; $i<count($ctgrs); $i++): ?>
+                            <li><a href="../controller/search_result.php?category_id=<?php echo $ctgrs[$i]['id']; ?>"><?php echo $ctgrs[$i]['name']; ?></a></li>
+                        <?php endfor; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <?php
+                if(isset($_COOKIE["login_id"])){ ?>
+                <a href="./news.php" class="notification"><span class="material-icons-outlined">notifications</span></a>
+                <a href="./my_page.php">
+                    <?php
+                    $link = connect_db (HOST,USER_ID,PASSWORD,DB_NAME);
+                    if($link == false){
+                        //エラー処理
+                        header("location: error.php?error=ERROR");
+                        exit;
+                    }
+                    $query = "SELECT * FROM user WHERE id = " . $_COOKIE["login_id"];
+                    $head_user = mysqli_fetch_assoc(mysqli_query($link, $query));
+                    mysqli_close($link);
+
+                    if($head_user["icon_img"] == NULL){?>
+                    <span class="material-icons-outlined account_img">person_outline</span><?php
+                    }else{?>
+                        <img src="../../ansim_user/<?php print $head_user["id"] . "/" . $head_user["icon_img"];?>" class="account_img"><?php
+                    }?>
+                </a>
+                <a href="sell_item.php" class="btn">出品する</a><?php
+            }else{?>
+            <a class="btn" href="sign_in.php">ログイン</a>
+            <a class="btn" href="sign_up.php">新規登録</a><?php
+            } ?>
+        </div>
+    </form>
+
+    <script>
+        const txtBox = document.getElementsByName('header_search_item')[0];
+        txtBox.addEventListener('focus', (e) => {
+            document.getElementsByClassName('category_list')[0].classList.remove('is-inactive');
+        });
+
+        const clsBtn = document.getElementsByClassName('close')[0];
+        clsBtn.addEventListener('click', (e) => {
+            document.getElementsByClassName('category_list')[0].classList.add('is-inactive');
+        });
+        document.addEventListener('click', (e) => {
+            if(!e.target.closest('.search_item') && !e.target.closest('.category_list')) {
+                document.getElementsByClassName('category_list')[0].classList.add('is-inactive');
+            }
+        });
+    </script>
+</header>
+<div id="header_spacer"></div>
+
+<!--
+<div id="logout_modal" class="hidden">
+    <div id="logout_window">
+        <span class="material-icons-outlined close_btn">close</span>
+        <p>本当にログアウトしますか？</p>
+        <a href="logout.php" id="logout" class="btn">ログアウト<span class="material-icons-outlined">logout</span></a>
+    </div>
+</div> -->

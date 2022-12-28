@@ -1,0 +1,36 @@
+@import "variable";
+
+.wrapper{
+  h1{
+    font-size: 30px;
+    border-bottom: solid 2px $main_color;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  width: 700px;
+  margin: 0 auto;
+  a{
+    cursor: pointer;
+  }
+  .area{
+    min-height: 500px;
+    ul a{
+      margin: 0 auto;
+      display: block;
+      padding: 20px 0 20px 20px;
+      border-bottom: solid 0.5px rgb(207, 207, 207);
+      transition: box-shadow 0.3s;
+      border-radius: 4px;
+      &:hover{
+        box-shadow: $shadow-3dp;
+      }
+    }
+  }
+}
+
+.none{
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 40px;
+  text-align: center;
+}

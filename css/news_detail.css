@@ -1,0 +1,38 @@
+.wrapper {
+  width: 700px;
+  margin: 100px auto;
+}
+
+.wrapper h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.wrapper .area {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.wrapper .area .date {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #8f8f8f;
+}
+
+.wrapper .area .text {
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.wrapper button {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper .del_btn {
+  background-color: red;
+}

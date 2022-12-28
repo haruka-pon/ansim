@@ -1,0 +1,122 @@
+@import "variable";
+h1{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+section{
+    min-height: calc(100vh - 260px);
+    width: 600px;
+}
+#progress{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 10px;
+    .point{
+        height: 10px;
+        background-color: $bgc-2dp;
+        width: 100%;
+        border-radius: 50px;
+    }
+    .current{
+        background-color: $main_color;
+        opacity: 0.3;
+    }
+    .completed{
+        background-color: $main_color;
+    }
+}
+label, .items{
+    display: block;
+    margin-bottom: 25px;
+    position: relative;
+    div{
+        &.item_title {
+            font-weight: 600;
+        }
+        &.item_detail {
+            padding: 8px 24px;
+            width: 100%;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+        &.is-error {
+            color: rgb(221, 41, 74);
+            font-weight: 100;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    .required{
+        font-weight: normal;
+        font-size: 0.9rem;
+        background-color: rgb(255, 0, 0);
+        border-radius: 2px;
+        padding: 2px 4px;
+        color: rgb(255, 255, 255);
+    }
+    input,textarea,select{
+        padding: 8px 24px;
+        width: 100%;
+        border: 1px solid rgb(189, 189, 189);
+        border-radius: 4px;
+        &:focus{
+            border-color: #000;
+        }
+    }
+    select:invalid{
+        color: #757575;
+    }
+    .post_box{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        input{
+            width: 100%;
+        }
+        button{
+            padding: 8px;
+            width: 50%;
+            white-space: nowrap;
+            text-align: center;
+        }
+    }
+}
+#privacy{
+    text-align: center;
+    margin: 40px 0;
+    a{
+        color: $link_c;
+    }
+}
+#sign_up_btn{
+    margin: 0 auto;
+    display: block;
+}
+
+.btn_box {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.back{
+    background-color: rgb(160, 160, 160);
+    color: $main_text_color;
+}
+.complete{
+    text-align: center;
+    height: 100%;
+    p{
+        margin: 20px;
+        img{
+            width: 80%;
+            border-radius: 4px;
+        }
+    }
+}

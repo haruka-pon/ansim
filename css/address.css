@@ -1,0 +1,142 @@
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+section {
+  min-height: calc(100vh - 260px);
+  width: 600px;
+}
+
+#progress {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 10px;
+}
+
+#progress .point {
+  height: 10px;
+  background-color: #f0f0f0;
+  width: 100%;
+  border-radius: 50px;
+}
+
+#progress .current {
+  background-color: #832ee4;
+  opacity: 0.3;
+}
+
+#progress .completed {
+  background-color: #832ee4;
+}
+
+label, .items {
+  display: block;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+label div.item_title, .items div.item_title {
+  font-weight: 600;
+}
+
+label div.item_detail, .items div.item_detail {
+  padding: 8px 24px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+label div.is-error, .items div.is-error {
+  color: #dd294a;
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+label .required, .items .required {
+  font-weight: normal;
+  font-size: 0.9rem;
+  background-color: red;
+  border-radius: 2px;
+  padding: 2px 4px;
+  color: white;
+}
+
+label input, label textarea, label select, .items input, .items textarea, .items select {
+  padding: 8px 24px;
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+}
+
+label input:focus, label textarea:focus, label select:focus, .items input:focus, .items textarea:focus, .items select:focus {
+  border-color: #000;
+}
+
+label select:invalid, .items select:invalid {
+  color: #757575;
+}
+
+label .post_box, .items .post_box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+label .post_box input, .items .post_box input {
+  width: 100%;
+}
+
+label .post_box button, .items .post_box button {
+  padding: 8px;
+  width: 50%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#privacy {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#privacy a {
+  color: #006eff;
+}
+
+#sign_up_btn {
+  margin: 0 auto;
+  display: block;
+}
+
+.btn_box {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
+  background-color: #a0a0a0;
+  color: #141414;
+}
+
+.complete {
+  text-align: center;
+  height: 100%;
+}
+
+.complete p {
+  margin: 20px;
+}
+
+.complete p img {
+  width: 80%;
+  border-radius: 4px;
+}

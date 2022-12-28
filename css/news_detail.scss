@@ -1,0 +1,34 @@
+@import "variable";
+.wrapper{
+  h1{
+    font-size: 30px;
+    // border-bottom: solid 2px $main_color;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  width: 700px;
+  margin: 100px auto;
+  .area{
+    margin: 0 auto;
+    width: 80%;
+    .date{
+        margin-top: 5px;
+        font-size: 10px;
+        color: rgb(143, 143, 143);
+    }
+    .text{
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+  }
+  button{
+      width: 20%;
+      margin: 0 auto;
+        text-align: center;
+  }
+  .del_btn{
+      background-color: red;
+  }
+}

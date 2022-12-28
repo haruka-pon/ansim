@@ -1,0 +1,143 @@
+@import "variable";
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+.rows{
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    border-bottom: 1px solid $bgc-4dp;
+    padding: 40px 0;
+    h2{
+        grid-column: 1/2;
+        font-weight: 700;
+    }
+    & > div:nth-of-type(1){
+        grid-column: 2/3;
+        & > div{
+            display: flex;
+            gap: 20px;
+            img{
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+                background-color: rgb(237,237,237);
+                border-radius: 3px;
+            }
+            #item_name{
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            #seller{
+                span{
+                    color: $link_c;
+                }
+            }
+        }
+        .price{
+            margin-top: 20px;
+            font-weight: 600;
+            color: rgb(204, 0, 0);
+        }
+    }
+    & > div:nth-of-type(2){
+        grid-column: 3/4;
+        height: 54px;
+        text-align:center;
+        padding:20px 16px;
+    }
+    a,.change{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $link_c;
+        span{
+            font-size: 1.1rem;
+        }
+    }
+    .cancel{
+        background-color: #fff;
+        color: $main_color !important;
+        border: 1px solid $main_color;
+        &:hover{
+            background-color: $main_color-hov;
+        }
+        a{
+            color: $main_color !important;
+        }
+    }
+    .pay_add{
+        justify-content: left;
+    }
+    #shipping_address{
+        div{
+            margin-bottom: 5px;
+        }
+        div:last-child{
+            margin-top: 10px;
+        }
+    }
+    #shipping_date{
+        div{
+            margin-bottom: 5px;
+        }
+        div:last-child{
+            margin-top: 10px;
+        }
+    }
+    .payment{
+        display: flex;
+        align-items: center;
+    }
+    #bill{
+        margin: 0 auto 0 0;
+        &>.rows{
+            width: 400px;
+            height: 2.5rem;
+            display: flex;
+            justify-content: left;
+            justify-items: start;
+            border: none;
+            padding: 5px 0;
+
+            &>div:nth-of-type(1){
+                width: 150px;
+            }
+            &>div:nth-of-type(2){
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+        &>.rows:last-child{
+            padding-top: 25px;
+        }
+        .price{
+            margin: 0;
+        }
+    }
+}
+
+#privacy{
+    text-align: center;
+    margin: 40px 0;
+    a{
+        color: $link_c;
+    }
+}
+#purchase_btn{
+    margin: 60px auto;
+    display: block;
+    height: 54px;
+    width: 200px;
+    padding: 10px 16px;
+    text-align: center;
+    &:disabled{
+        background-color: grey;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

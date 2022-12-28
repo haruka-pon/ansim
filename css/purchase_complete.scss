@@ -1,0 +1,17 @@
+@import "variable";
+
+section{
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    h1{
+        font-weight: 900;
+        font-size: 1.8rem;
+        color: rgb(0, 196, 49);
+    }
+    span.material-icons-outlined{
+        font-size: 7rem !important;
+    }
+}

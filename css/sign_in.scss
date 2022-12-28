@@ -1,0 +1,72 @@
+@import "variable";
+h1{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+section{
+    width: 600px;
+    padding: 20vh 0;
+}
+label{
+    display: block;
+    margin-bottom: 35px;
+    div{
+        font-weight: 600;
+    }
+    .required{
+        font-weight: normal;
+        font-size: 0.9rem;
+        background-color: rgb(255, 0, 0);
+        border-radius: 2px;
+        padding: 2px 4px;
+        color: rgb(255, 255, 255);
+    }
+    input,textarea,select{
+        padding: 8px 24px;
+        width: 100%;
+        border: 1px solid #000;
+        border-radius: 4px;
+    }
+    select:invalid{
+        color: #757575;
+    }
+    .post_box{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        input{
+            width: 50%;
+        }
+        button{
+            padding: 8px;
+            width: 100%;
+            white-space: nowrap;
+            text-align: center;
+        }
+    }
+}
+#privacy{
+    text-align: center;
+    margin: 40px 0;
+    a{
+        color: $link_c;
+    }
+}
+#sign_in_btn{
+    margin: 0 auto;
+    display: block;
+}
+.err_msg{
+    margin-bottom: 15px;
+    color: rgb(225, 4, 81);
+}
+#forget_password{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
